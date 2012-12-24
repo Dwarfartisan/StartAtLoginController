@@ -97,7 +97,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 I use debug log macro like:
 
-<code>
+<div>
 
 #ifdef DEBUG
 #       define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
@@ -105,4 +105,4 @@ I use debug log macro like:
 #       define DLog(...)
 #endif
 
-</code>
+</div>
