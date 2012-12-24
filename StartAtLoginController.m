@@ -59,10 +59,8 @@
 -(void)setIdentifier:(NSString *)identifier {
     _identifier = identifier;
     [self startAtLogin];
-#if !defined(NDEBUG)
-    NSLog(@"Launcher '%@' %@ configured to start at login",
+    DLog(@"Launcher '%@' %@ configured to start at login",
           self.identifier, (_enabled ? @"is" : @"is not"));
-#endif
 }
 
 - (BOOL)startAtLogin {
@@ -100,7 +98,7 @@
     [self willChangeValueForKey:@"startAtLogin"];
     
     if (!SMLoginItemSetEnabled((__bridge CFStringRef)_identifier, (flag) ? true : false)) {
-        NSLog(@"SMLoginItemSetEnabled failed!");
+        DLog(@"SMLoginItemSetEnabled failed!");
         
         [self willChangeValueForKey:@"enabled"];
         _enabled = NO;
