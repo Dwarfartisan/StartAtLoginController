@@ -104,3 +104,6 @@ I use debug log macro like:
     #       define DLog(...)
     #endif
 ```
+
+You can put the code in to .pch as so on.
+
