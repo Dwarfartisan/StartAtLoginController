@@ -97,9 +97,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 I use debug log macro like:
 
-> #ifdef DEBUG
-> #       define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-> #else
-> #       define DLog(...)
-> #endif
-
+```objc
+    #ifdef DEBUG
+    #       define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+    #else
+    #       define DLog(...)
+    #endif
+```
