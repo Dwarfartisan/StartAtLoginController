@@ -92,3 +92,14 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [SM]: http://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html
 [Tutorial]: http://blog.timschroeder.net/2012/07/03/the-launch-at-login-sandbox-project/
+
+# DwarfArtisan Fork
+
+I use debug log macro like:
+
+#ifdef DEBUG
+#       define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#       define DLog(...)
+#endif
+
